@@ -9,14 +9,14 @@ Minimal HR employee-management API built with Flask, SQLite, and SQLAlchemy. The
 
 ## Getting Started
 
-### Using helper scripts
+### Using helper scripts (e.g. on Render)
 
 ```bash
-/home/niko/Coding/dummy-api/scripts/build.sh   # installs dependencies
-/home/niko/Coding/dummy-api/scripts/start.sh   # runs Flask server (honors $HOST/$PORT)
+/home/niko/Coding/dummy-api/scripts/build.sh   # pip install -r requirements.txt
+/home/niko/Coding/dummy-api/scripts/start.sh   # python -m flask run (honors $HOST/$PORT)
 ```
 
-### Manual steps
+### Manual steps (local dev with pipenv)
 
 ```bash
 cd /home/niko/Coding/dummy-api

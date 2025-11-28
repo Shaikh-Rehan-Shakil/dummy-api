@@ -2,17 +2,10 @@
 
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "${ROOT}"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "${PROJECT_ROOT}"
 
-export PIPENV_VENV_IN_PROJECT=1
-
-if ! command -v pipenv >/dev/null 2>&1; then
-  echo "[build] Installing pipenv..."
-  python3 -m pip install --upgrade pip pipenv
-fi
-
-echo "[build] Installing dependencies..."
-pipenv install --deploy --ignore-pipfile
+echo "[build] Installing dependencies with pip..."
+pip install -r requirements.txt
 
 echo "[build] Ready."
