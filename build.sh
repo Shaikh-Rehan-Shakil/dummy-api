@@ -11,7 +11,7 @@ echo "[build] Ensuring pipenv is installed..."
 python3 -m pip install --upgrade pip pipenv
 
 echo "[build] Installing dependencies from Pipfile..."
-python3 -m pipenv install --deploy --ignore-pipfile
+pipenv install --deploy --ignore-pipfile
 
 echo "[build] Ready."
 

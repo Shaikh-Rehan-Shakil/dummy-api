@@ -10,5 +10,8 @@ export FLASK_APP=app
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-5000}"
 
-echo "[start] Starting Dummy HR API on ${HOST}:${PORT}..."
-python3 -m pipenv run flask run --host "${HOST}" --port "${PORT}" --reload
+echo "[start] Ensuring pipenv is installed..."
+python3 -m pip install --upgrade pip pipenv
+
+echo "[start] Starting Dummy HR API on ${HOST}:${PORT} via Pipenv..."
+pipenv run flask run --host "${HOST}" --port "${PORT}" --reload
