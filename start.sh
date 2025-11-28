@@ -6,9 +6,6 @@ cd "${ROOT}"
 
 export PIPENV_VENV_IN_PROJECT=1
 
-echo "[start] Ensuring pipenv is installed..."
-python3 -m pip install --upgrade pip pipenv
-
 export FLASK_APP=app
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-5000}"
