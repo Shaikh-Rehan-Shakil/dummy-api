@@ -7,13 +7,11 @@ cd "${ROOT}"
 
 export PIPENV_VENV_IN_PROJECT=1
 
-if ! command -v pipenv >/dev/null 2>&1; then
-  echo "[build] Installing pipenv..."
-  python3 -m pip install --upgrade pip pipenv
-fi
+echo "[build] Ensuring pipenv is installed..."
+python3 -m pip install --upgrade pip pipenv
 
-echo "[build] Installing dependencies..."
-pipenv install --deploy --ignore-pipfile
+echo "[build] Installing dependencies from Pipfile..."
+python3 -m pipenv install --deploy --ignore-pipfile
 
 echo "[build] Ready."
 
