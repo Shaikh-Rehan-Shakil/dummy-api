@@ -9,4 +9,4 @@ HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-5000}"
 
 echo "Starting Dummy HR API on ${HOST}:${PORT}..."
-python -m flask run --host "${HOST}" --port "${PORT}" --reload
+python3 -m flask run --host "${HOST}" --port "${PORT}" --reload
